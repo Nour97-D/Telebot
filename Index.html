@@ -1,0 +1,18 @@
+from telegram import Bot, KeyboardButton, ReplyKeyboardMarkup
+
+# Replace 'token' with your bot's token
+bot = Bot(token='7290262856:AAEKDB3yfkPn-zevN4rsfdGdbYtJnwf-4ew')
+
+# Define the Web App URL
+web_app_url = "https://t.me/Popularitypg_bot/Nour"
+
+# Create the custom keyboard button
+keyboard = [
+    [KeyboardButton(text="Open Calculator", web_app={"https://t.me/Popularitypg_bot/Nour": web_app_url})]
+]
+
+# Create the keyboard markup
+reply_markup = ReplyKeyboardMarkup(keyboard, resize_keyboard=True)
+
+# Replace 'CHAT_ID' with the chat ID where you want to send the message
+bot.send_message(chat_id='CHAT_ID', text='Click the button below to open the Web App:', reply_markup=reply_markup)
